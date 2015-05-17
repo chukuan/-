@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainFrame"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparency" >
+	
+    <com.zxc.tigerunlock.PullDoorView
+        android:id="@+id/myImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+		 <TextView 
+		    android:id="@+id/tv_info"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:text="@string/please_input_pwd"
+		    android:layout_alignParentTop="true"
+		    android:textColor="#ffffff"
+		    android:textSize="20sp"
+		    android:layout_marginTop="10dp"/>
+		 <LinearLayout 
+		    android:id="@+id/ll_pass"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="15dp"
+		    android:orientation="horizontal"
+		    android:layout_below="@id/tv_info"
+		    android:gravity="center_horizontal"
+		    android:layout_marginTop="10dp">
+	    <com.zxc.tigerunlock.PasswordTextView  
+	        android:id="@+id/et_pwd1"
+	        style="@style/style_edit"/>
+	    <com.zxc.tigerunlock.PasswordTextView 
+	        android:id="@+id/et_pwd2"
+	        style="@style/style_edit"
+	        android:layout_marginLeft="15dp"/>
+	    <com.zxc.tigerunlock.PasswordTextView  
+	        android:id="@+id/et_pwd3"
+	        style="@style/style_edit"
+	        android:layout_marginLeft="15dp"/>
+	    <com.zxc.tigerunlock.PasswordTextView  
+	        android:id="@+id/et_pwd4"
+	        style="@style/style_edit"
+	        android:layout_marginLeft="15dp"/>
+	</LinearLayout>
+		<!-- 数字键盘 -->
+	    <include 
+	        android:id="@+id/layout_keyboard"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	       
+	        android:layout_above="@+id/rl_bottom"
+	        android:layout_marginTop="30dp"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        layout="@layout/number_keyboard"/>
+	    <!-- 底部布局 -->
+		<RelativeLayout 
+		    android:id="@id/rl_bottom"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true">
+		    <!-- 重输按钮 -->
+		    <Button 
+		        android:id="@+id/btn_again"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/input_again"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginLeft="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:background="@drawable/radiusbutton"
+		       
+		        />
+		    <!-- 删除按钮 -->
+		    <Button 
+		        android:id="@+id/btn_delete"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/delete"
+		        android:layout_alignParentRight="true"
+		        android:layout_marginRight="10dp"
+		        android:layout_marginBottom="10dp"
+		   		android:background="@drawable/radiusbutton"
+		        />
+		</RelativeLayout>
+        
+    </com.zxc.tigerunlock.PullDoorView>
+
+</LinearLayout>
